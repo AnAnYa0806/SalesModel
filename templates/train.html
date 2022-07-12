@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deployment Tutorial 1</title>
+
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Sales Forecasting</h1>
+        <a href="/">Predict</a>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="/train" method="post">
+            <input type="text" name="fi" placeholder="Fit intercept value (true or false)" required="required" />
+            <input type="text" name="n" placeholder="Normalize (true or false)" required="required" />
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Train with these hyperparameters</button>
+        </form>
+
+        <br>
+        <br>
+        {{ done_text }}
+
+    </div>
+
+
+</body>
+
+</html>
